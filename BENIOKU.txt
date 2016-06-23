@@ -1,0 +1,4 @@
+------------------------- Graduation Project Presentation -------------------------
+Open index.html file with a browser (Google Chrome works better)
+Then, go to next slide with SPACE button, Do not use right button
+When right button is used, you skip some slides!

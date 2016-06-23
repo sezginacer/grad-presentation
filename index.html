@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Remotely Controlled Explorer Robot - Sezgin ACER</title>
+
+		<meta name="description" content="Remotely Controlled Explorer Robot">
+		<meta name="author" content="Sezgin ACER">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/sky.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]--><!-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h2>Remotely Controlled Explorer Robot</h2>
+					<h3> <small> Graduation Project </small></h3>
+					<p>
+						Sezgin ACER <br> <br> <br>
+						Advisor: Asst. Prof. Dr. Ömer Sinan SARAÇ
+					</p>
+				</section>
+
+				<section>
+					<h2>Table of Contents</h2>
+					<ul>
+						<li>Problem and Solution</li>
+						<li>Design and Implementation</li>
+						<li>Encountered Problems</li>
+						<li>Experiments and Results</li>
+						<li>Further Research</li>
+						<li>Demonstration</li>
+					</ul>
+				</section>
+
+				<!-- Example of nested vertical slides -->
+				<section>
+					<section>
+						<h1><font color="#CC0000">PROBLEM ??</font></h1>
+					</section>
+					<section>
+						<h2>Places difficult to move</h2>
+						<p>Suppose that there is a problem somewhere and it's not possible to move in any direction. <br>
+							What can you do in such case??</p>
+					</section>
+					<section data-background="gifs/cat.gif">
+					</section>
+
+					<section>
+						<h2>Watch office, home or somewhere else</h2>
+						<p>People usually want all the things to be under their control and safe in places they live and work.</p>
+					</section>
+
+					<section data-background="gifs/cat2.gif">
+					</section>
+
+					<section>
+						<h2>Military Purpose</h2>
+						<p>There can be a place far away to watch for military purpose.</p>
+					</section>
+
+				</section>
+
+				<section>
+					<section>
+						<h1><font color="#0066FF">Solution</font></h1>
+						<h3 class="fragment">You guessed it right!</h3>
+						<h2 class="fragment">A robot</h2>
+					</section>
+					<section>
+						<h2>A robot</h2>
+						<ul>
+							<li>with a Camera</li>
+							<li>connected to Internet</li>
+							<li>controlled by a SmartPhone</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h1>Design</h1>
+					</section>
+					<section>
+						<h2>Raspberry Pi</h2>
+						<ul>
+							<li>computer in the size of Credit Card</li>
+							<li>has Quad-Core ARM CPU and 1GB RAM</li>
+							<li>has GPIO pins for digital I/O</li>
+							<li>has Camera port</li>
+							<li>can run some GNU/Linux distributions</li>
+							<li>can easily connected to Internet via ethernet or Wi-Fi</li>
+						</ul>
+					</section>
+
+					<section data-background="img/Raspberry-Pi.jpg">
+					</section>
+
+					<section>
+						<h2>Robot Body</h2>
+						<ul>
+							<li>should move easily</li>
+							<li>should be cheap</li>
+							<li>should consume less energy</li>
+						</ul>
+					</section>
+					<section data-background="img/chassis.jpg"></section>
+					<section>
+						<h2>Power Supply</h2>
+						<ul>
+							<li>should have high capacity</li>
+							<li>should be light and move easily</li>
+							<li>should have two output</li>
+						</ul>
+					</section>
+					<section data-background="img/bat.jpg"></section>
+					<section>
+						<h2>Pubnub Real-Time Communication Service</h2>
+						<ul>
+							<li>provides real-time communication among devices</li>
+							<li>supports many programming languages</li>
+							<li>uses Publish - Subscribe model for communication</li>
+							<li>has free plan for developers</li>
+						</ul>
+					</section>
+					<section><img src="img/ps.gif" background="" height="200%" width="200%" style="border: 0;"></section>
+					<section data-background="img/android.jpg">
+						<h2><font color="FFFFFF">Android Application</font></h2><br>
+						<ul>
+							<li><font color="FFFFFF">82% of smartphones running Android (IDC's research)</font></li>
+							<li><font color="FFFFFF">Development is easy and free</font></li>
+							<li><font color="FFFFFF">Open source operating system</font></li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>When we combine all</h2>
+					</section>
+					<section><img src="img/last.jpg" height="50%" width="50%" style="border: 0;"></section>
+					<section><img src="img/app.png" height="40%" width="40%" style="border: 0;"></section>
+				</section>
+				<section>
+					<section><h1><font color="#CC0000">Problems</font> encountered</h1></section>
+					<section>
+						<h2>4-Wheel or 2-Wheel</h2>
+						<ul>
+							<li>4-Wheel design consumes more power</li>
+							<li>4-Wheel design has difficulties while moving</li>
+							<li>2-Wheel design has better maneuverability capability</li>
+							<li>2-Wheel design consumes less power</li>
+						</ul>
+						<br>
+						<p>For these reasons, we decided to use 2-wheels and one ball caster in the front.</p>
+					</section>
+					<section>
+						<h2>Camera Latency</h2>
+						<ul>
+							<li>There is latency between real frame and one in the phone</li>
+							<li>Latency even in local network</li>
+							<li>Resolution and FPS affect latency</li>
+							<li>Caused by CPU's processing video streaming</li>
+							<li>Development kit can be changed to BeagleBone</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section><h1>Experiments</h1></section>
+					<section>
+						<h3>Is it easy to use the robot and the application?</h2>
+							<img src="img/easy.png" style="border: 0;">
+					</section>
+					<section>
+						<h3>Is the latency of camera good enough?</h3>
+						<img src="img/latency.png" style="border: 0;">
+					</section>
+				</section>
+				<section>
+					<section><h1>Future Work</h1></section>
+					<section>
+						<h2>Virtual Reality (VR)</h2>
+						<ul>
+							<li>One of IT trends of today and near future</li>
+							<li>Can be combined with this project</li>
+							<li>Robot user can feel him/her as if sitting on top of robot</li>
+							<li>Robot can be controlled by head motions</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<h1>It's demo time!</h1>
+				</section>
+				<section>
+					<h1>THE END</h1>
+					<h2>Thanks for your listening..</h2>
+				</section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				menu: {
+		        // Specifies which side of the presentation the menu will 
+		        // be shown. Use 'left' or 'right'.
+		        side: 'left',
+
+		        // Add slide numbers to the titles in the slide list.
+		        // Use 'true' or format string (same as reveal.js slide numbers)
+		        numbers: false,
+
+		        // Hide slides from the menu that do not have a title.
+		        // Set to 'true' to only list slides with titles.
+		        hideMissingTitles: false,
+
+		        // Add markers to the slide titles to indicate the 
+		        // progress through the presentation
+		        markers: false,
+
+		        // Specify custom panels to be included in the menu, by
+		        // providing an array of objects with 'title', 'icon'
+		        // properties, and either a 'src' or 'content' property.
+		        custom: false,
+
+		        // Specifies the themes that will be available in the themes
+		        // menu panel. Set to 'false' to hide themes panel.
+		        themes: [
+		            { name: 'Black', theme: 'css/theme/black.css' },
+		            { name: 'White', theme: 'css/theme/white.css' },
+		            { name: 'League', theme: 'css/theme/league.css' },
+		            { name: 'Sky', theme: 'css/theme/sky.css' },
+		            { name: 'Beige', theme: 'css/theme/beige.css' },
+		            { name: 'Simple', theme: 'css/theme/simple.css' },
+		            { name: 'Serif', theme: 'css/theme/serif.css' },
+		            { name: 'Blood', theme: 'css/theme/blood.css' },
+		            { name: 'Night', theme: 'css/theme/night.css' },
+		            { name: 'Moon', theme: 'css/theme/moon.css' },
+		            { name: 'Solarized', theme: 'css/theme/solarized.css' }
+		        ],
+
+        // Specifies if the transitions menu panel will be shown.
+        transitions: true,
+
+        // Adds a menu button to the slides to open the menu panel.
+        // Set to 'false' to hide the button.
+        openButton: true,
+
+        // If 'true' allows the slide number in the presentation to
+        // open the menu panel. The reveal.js slideNumber option must 
+        // be displayed for this to take effect
+        openSlideNumber: false,
+
+        // If true allows the user to open and navigate the menu using
+        // the keyboard. Standard keyboard interaction with reveal
+        // will be disabled while the menu is open.
+        keyboard: true
+    },
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/menu/menu.js' }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
